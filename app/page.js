@@ -7,7 +7,6 @@ import ChooseUs from "./_components/chooseUs/chooseUs";
 import Offer from "./_components/offer/Offer";
 import OurServices from "./_components/ourServices/OurServices";
 import ContactUs from "./_components/contactUs/ContactUs";
-import Footer from "./_components/footer/Footer";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <Offer />
       <OurServices />
       <ContactUs />
-      <Footer />
     </section>
   );
 }
