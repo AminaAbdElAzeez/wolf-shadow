@@ -16,6 +16,7 @@ const robotoMono = Roboto_Mono({
 
 export const metadata = {
   title: "Wolf Shadow",
+  icon: "icon.png",
   description: "Welcome to Wolf Shadow.",
   keywords: "Next.js, React, Web Development, Frontend",
   author: "Apps Square Team",
