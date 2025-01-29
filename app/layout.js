@@ -14,6 +14,14 @@ const robotoMono = Roboto_Mono({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: "Wolf Shadow",
+  description: "Welcome to Wolf Shadow.",
+  keywords: "Next.js, React, Web Development, Frontend",
+  author: "Apps Square Team",
+  robots: "index, follow",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
