@@ -36,7 +36,7 @@ function GoogleMaps() {
 
   useEffect(() => {
     setIsClient(true);
-    if (typeof window !== "undefined" && isClient) {
+    if (isClient) {
       try {
         delete L.Icon.Default.prototype._getIconUrl;
         L.Icon.Default.mergeOptions({
