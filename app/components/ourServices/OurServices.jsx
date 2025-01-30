@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./OurServices.module.css";
+import Link from "next/link";
 
 function OurServices() {
   return (
@@ -27,9 +28,9 @@ function OurServices() {
                 Stop worrying about damage or scratches to your car's paint and
                 other effects of smooth and textured surfaces.
               </p>
-              <button className={styles.ourServicesLeftBtn}>
+              <Link href="/services" className={styles.ourServicesLeftBtn}>
                 Order Services
-              </button>
+              </Link>
             </div>
           </div>
           <div className={styles.ourServicesRight}>

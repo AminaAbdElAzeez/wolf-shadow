@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProfileTitle from "../profileTitle/profileTitle";
 import styles from "./ServicesContent.module.css";
+import Link from "next/link";
 
 const ServicesContent = () => {
   return (
@@ -35,9 +36,9 @@ const ServicesContent = () => {
                   car's paint and other effects of smooth and textured <br />
                   surfaces.
                 </p>
-                <button className={styles.servicesContentItemBtn}>
+                <Link href="#servicesPayment" className={styles.servicesContentItemBtn}>
                   Order Services
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -58,9 +59,9 @@ const ServicesContent = () => {
                   car's paint and other effects of smooth and textured <br />
                   surfaces.
                 </p>
-                <button className={styles.servicesContentItemBtn}>
+                <Link href="#servicesPayment" className={styles.servicesContentItemBtn}>
                   Order Services
-                </button>
+                </Link>
               </div>
             </div>
             <div className={styles.servicesContentItem}>
@@ -97,9 +98,9 @@ const ServicesContent = () => {
                   car's paint and other effects of smooth and textured <br />
                   surfaces.
                 </p>
-                <button className={styles.servicesContentItemBtn}>
+                <Link href="#servicesPayment" className={styles.servicesContentItemBtn}>
                   Order Services
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -120,9 +121,9 @@ const ServicesContent = () => {
                   car's paint and other effects of smooth and textured <br />
                   surfaces.
                 </p>
-                <button className={styles.servicesContentItemBtn}>
+                <Link href="#servicesPayment" className={styles.servicesContentItemBtn}>
                   Order Services
-                </button>
+                </Link>
               </div>
             </div>
             <div className={styles.servicesContentItem}>

@@ -79,6 +79,9 @@
   line-height: 24px;
   width: 155px;
   height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border: 1px solid #ce0909;
   border-radius: 8px;

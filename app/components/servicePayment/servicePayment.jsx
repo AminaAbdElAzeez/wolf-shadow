@@ -5,7 +5,7 @@ import ProfileTitle from "../profileTitle/profileTitle";
 
 function ServicePayment() {
   return (
-    <section className={styles.servicePayment}>
+    <section className={styles.servicePayment} id="servicesPayment">
       <div className="container">
         <ProfileTitle
           subTitle="Our Services"

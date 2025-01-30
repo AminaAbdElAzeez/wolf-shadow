@@ -89,7 +89,7 @@ function Header() {
             </ul>
           </div>
           <div className={styles.right}>
-            <button className={styles.orderBtn}>Order Services</button>
+            <Link href="/services" className={styles.orderBtn}>Order Services</Link>
             <button className={styles.langToggleBtn}>
               <Image
                 src={"/images/Flag_of_Saudi_Arabia.svg.webp"}
