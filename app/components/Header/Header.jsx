@@ -6,10 +6,16 @@ import { IoMdClose } from "react-icons/io";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "next-i18next";
+import dynamic from 'next/dynamic';
+const LanguageSwitcher = dynamic(() => import('../LanguageSwitcher/LanguageSwitcher'), { ssr: false });
 
 function Header() {
+  
   const [toggle, setToggle] = useState(false);
   const path = usePathname();
+  const { t } = useTranslation("translation");
+
   return (
     <header className={styles.header}>
       <div className="container">
@@ -39,7 +45,7 @@ function Header() {
                     path === "/" ? styles.active : styles.link
                   }`}
                 >
-                  home
+                  {t("Home")}
                 </Link>
               </li>
               <li>
@@ -90,14 +96,15 @@ function Header() {
           </div>
           <div className={styles.right}>
             <Link href="/services" className={styles.orderBtn}>Order Services</Link>
-            <button className={styles.langToggleBtn}>
+            {/* <button className={styles.langToggleBtn}>
               <Image
                 src={"/images/Flag_of_Saudi_Arabia.svg.webp"}
                 alt="flag"
                 width={48}
                 height={32}
               />
-            </button>
+            </button> */}
+            <LanguageSwitcher/>
             <div className={styles.menu}>
               {toggle ? (
                 <IoMdClose onClick={() => setToggle((prev) => !prev)} />
