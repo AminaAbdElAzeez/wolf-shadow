@@ -1,13 +1,17 @@
+"use client"
 import Image from "next/image";
 import styles from "./ChooseUs.module.css";
 import { Card } from "antd";
+import { useTranslation } from "react-i18next";
+
 
 function ChooseUs() {
+      const { t } = useTranslation("translation");
   return (
     <section className={styles.chooseUs}>
       <div className="container">
         <div className={styles.chooseUsTitle}>
-          <h2>WHY CHOOSE US</h2>
+          <h2>{t("chooseUsTitle")}</h2>
           <Image
             src={"/images/Group-1.png"}
             alt="image"
@@ -25,9 +29,9 @@ function ChooseUs() {
                 height={40}
               />
             </div>
-            <h3 className={styles.chooseUsItemTitle}>Financing made easy</h3>
+            <h3 className={styles.chooseUsItemTitle}>{t("chooseUsItemTitle")}</h3>
             <p className={styles.chooseUsItemDesc}>
-              Choose your and find <br /> your best car
+              <span>{t("chooseUsItemDesc1")}</span> <br /> <span>{t("chooseUsItemDesc2")}</span>
             </p>
           </Card>
           <Card className={styles.chooseUsItem} hoverable>
@@ -39,10 +43,10 @@ function ChooseUs() {
                 height={40}
               />
             </div>
-            <h3 className={styles.chooseUsItemTitle}>Wide range of brands</h3>
+            <h3 className={styles.chooseUsItemTitle}>{t("chooseUsItemTitle2")}</h3>
             <p className={styles.chooseUsItemDesc}>
-              Select your pick up date and <br />
-              time to book your car{" "}
+              <span>{t("chooseUsItemDesc3")}</span> <br />
+              <span>{t("chooseUsItemDesc4")}</span>
             </p>
           </Card>
           <Card className={styles.chooseUsItem} hoverable>
@@ -54,9 +58,9 @@ function ChooseUs() {
                 height={40}
               />
             </div>
-            <h3 className={styles.chooseUsItemTitle}>Trusted by thousands</h3>
+            <h3 className={styles.chooseUsItemTitle}>{t("chooseUsItemTitle3")}</h3>
             <p className={styles.chooseUsItemDesc}>
-              Book your car and we will deliver <br /> it directly to you{" "}
+              <span>{t("chooseUsItemDesc5")}</span> <br /><span>{t("chooseUsItemDesc6")}</span>
             </p>
           </Card>
         </div>

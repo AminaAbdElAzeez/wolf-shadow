@@ -1,8 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition } from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "./Statistics.module.css";
-
+import { useTranslation } from "next-i18next";
 function Counter({ end, duration }) {
   const [count, setCount] = useState(0);
 
@@ -31,6 +31,7 @@ function Statistics() {
     triggerOnce: true,
     threshold: 0.3,
   });
+  const { t } = useTranslation("translation");
 
   return (
     <section className={styles.statistics} ref={ref}>
@@ -38,25 +39,25 @@ function Statistics() {
         {inView && (
           <div className={styles.statisticsContent}>
             <div className={styles.statisticsItem}>
-              <h5 className={styles.subTitle}>CAR RENTED</h5>
+              <h5 className={styles.subTitle}>{t("CARRENTED")}</h5>
               <h2 className={styles.title}>
                 <Counter end={240} duration={2000} />
               </h2>
             </div>
             <div className={styles.statisticsItem}>
-              <h5 className={styles.subTitle}>SATISFIED CLIENTS</h5>
+              <h5 className={styles.subTitle}>{t("SATISFIEDCLIENTS")}</h5>
               <h2 className={styles.title}>
                 <Counter end={235} duration={2000} />
               </h2>
             </div>
             <div className={styles.statisticsItem}>
-              <h5 className={styles.subTitle}>YEARS EXPERIENCE</h5>
+              <h5 className={styles.subTitle}>{t("YEARSEXPERIENCE")}</h5>
               <h2 className={styles.title}>
                 <Counter end={12} duration={2000} />
               </h2>
             </div>
             <div className={styles.statisticsItem}>
-              <h5 className={styles.subTitle}>CAR TYPES</h5>
+              <h5 className={styles.subTitle}>{t("CARTYPES")}</h5>
               <h2 className={styles.title}>
                 <Counter end={18} duration={2000} />
               </h2>

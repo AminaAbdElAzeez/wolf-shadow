@@ -1,15 +1,18 @@
+"use client"
 import Image from "next/image";
 import styles from "./AboutUs.module.css";
+import { useTranslation } from "react-i18next";
 
 function AboutUs() {
+    const { t } = useTranslation("translation");
   return (
     <section className={styles.aboutUs}>
       <div className="container">
         <div className={styles.aboutContent}>
           <div className={styles.aboutUsLeft}>
-            <h5 className={styles.aboutSubTitle}>about us</h5>
+            <h5 className={styles.aboutSubTitle}>{t("aboutUsSubTitle")}</h5>
             <h2 className={styles.aboutTitle}>
-              providing reliable <br /> car rentals
+              <span>{t("aboutUsTitle1")} </span><br /> <span>{t("aboutUsTitle2")}</span>
             </h2>
             <Image
               src={"/images/Group-1.png"}
@@ -18,16 +21,16 @@ function AboutUs() {
               height={7}
             />
             <p className={styles.aboutdesc}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              <span>{t("text1")}</span>
               <br />
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut{" "}
-              <br /> enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris <br /> nisi ut.
+              <span>{t("text2")}</span>
+              <br /><span> {t("text3")}</span> <br /><span>{t("text4")}</span>
             </p>
             <p className={styles.aboutdesc}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do{" "}
+              <span>{t("text1")}</span>
               <br />
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <span>{t("text2")}</span>
+              <br /><span> {t("text3")}</span> <br /><span>{t("text4")}</span>
             </p>
             <div className={styles.aboutInfo}>
               <div className={styles.aboutInfoItem}>
@@ -37,7 +40,7 @@ function AboutUs() {
                   width={55}
                   height={55}
                 />
-                <h4 className={styles.aboutInfoTitle}>safe & Trusted</h4>
+                <h4 className={styles.aboutInfoTitle}>{t("safe")}</h4>
               </div>
               <div className={styles.aboutInfoItem}>
                 <Image
@@ -46,7 +49,7 @@ function AboutUs() {
                   width={55}
                   height={55}
                 />
-                <h4 className={styles.aboutInfoTitle}>Affordable Price</h4>
+                <h4 className={styles.aboutInfoTitle}>{t("AffordablePrice")}</h4>
               </div>
             </div>
           </div>

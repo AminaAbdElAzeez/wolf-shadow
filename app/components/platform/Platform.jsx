@@ -1,16 +1,20 @@
+"use client"
+import { useTranslation } from "react-i18next";
 import styles from "./Platform.module.css";
 function Platform() {
+    const { t } = useTranslation("translation");
+  
   return (
     <section className={styles.platform}>
       <div className={styles.platformContent}>
         <div className="container">
           <div className={styles.platformText}>
-            <h5 className={styles.subTitle}>/ Car in easy staps</h5>
+            <h5 className={styles.subTitle}>{t("steps")}</h5>
             <h1 className={styles.title}>
-              perfeet way to buy <br />
-              and sell car on our <br /> platform
+              <span >{t("perfeet")}</span> <br />
+              <span> {t("sell")}</span> <br /> <span>{t("platform")}</span>
             </h1>
-            <button className={styles.platformBtn}>Knew More</button>
+            <button className={styles.platformBtn}>{t("KnewMore")}</button>
           </div>
         </div>
       </div>

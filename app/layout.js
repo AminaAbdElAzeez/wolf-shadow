@@ -34,11 +34,12 @@ export default function RootLayout({ children }) {
   const [language, setLanguage] = useState(i18nextConfig.i18n.defaultLocale);
 
   useEffect(() => {
-    const storedLang = localStorage.getItem("language") || "en";
+    const storedLang = localStorage.getItem("language") || i18nextConfig.i18n.defaultLocale;
     if (storedLang !== i18n.language) {
       i18n.changeLanguage(storedLang);
     }
-  }, [i18n]);
+    setLanguage(storedLang);
+  }, []);
   
   
 

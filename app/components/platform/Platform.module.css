@@ -1,6 +1,7 @@
 .platform {
   height: calc(100vh - 90px);
   margin-top: 90px;
+  width: 100%;
   background-image: url(../../../public/images/Rectangle.png);
   background-size: contain;
   background-position: right;

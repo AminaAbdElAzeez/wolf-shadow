@@ -7,8 +7,9 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "next-i18next";
-import dynamic from 'next/dynamic';
-const LanguageSwitcher = dynamic(() => import('../LanguageSwitcher/LanguageSwitcher'), { ssr: false });
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+// import dynamic from 'next/dynamic';
+// const LanguageSwitcher = dynamic(() => import('../LanguageSwitcher/LanguageSwitcher'), { ssr: false });
 
 function Header() {
   
@@ -45,7 +46,7 @@ function Header() {
                     path === "/" ? styles.active : styles.link
                   }`}
                 >
-                  {t("Home")}
+                  {t("NavHome")}
                 </Link>
               </li>
               <li>
@@ -56,7 +57,7 @@ function Header() {
                     path === "/works" ? styles.active : styles.link
                   }`}
                 >
-                  Works
+                  {t("Works")}
                 </Link>
               </li>
               <li>
@@ -67,7 +68,7 @@ function Header() {
                     path === "/services" ? styles.active : styles.link
                   }`}
                 >
-                  services
+                {t("services")}
                 </Link>
               </li>
               <li>
@@ -78,7 +79,7 @@ function Header() {
                     path === "/about" ? styles.active : styles.link
                   }`}
                 >
-                  About us
+                {t("About")}
                 </Link>
               </li>
               <li>
@@ -89,13 +90,13 @@ function Header() {
                     path === "/contact" ? styles.active : styles.link
                   }`}
                 >
-                  contact
+                {t("contact")}
                 </Link>
               </li>
             </ul>
           </div>
           <div className={styles.right}>
-            <Link href="/services" className={styles.orderBtn}>Order Services</Link>
+            <Link href="/services" className={styles.orderBtn}>{t("OrderServices")}</Link>
             {/* <button className={styles.langToggleBtn}>
               <Image
                 src={"/images/Flag_of_Saudi_Arabia.svg.webp"}
